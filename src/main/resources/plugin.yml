@@ -1,0 +1,26 @@
+name: SHViaTickFix
+version: '${project.version}'
+main: org.Cry_Legende.sHViaTickFix.SHViaTickFix
+api-version: '1.20'
+author: Cry_Legende
+description: Ajoute la fin de tick qui manque aux clients 1.21.2 et 1.21.3 pour qu'ils ne soient plus expulsés pour mouvement invalide.
+depend: [ViaVersion, ViaBackwards]
+
+commands:
+  shviatickfix:
+    description: Administration de SHViaTickFix.
+    usage: /<command> <status|reload>
+
+permissions:
+  shviatickfix.admin:
+    description: Toute l'administration de SHViaTickFix.
+    default: op
+    children:
+      shviatickfix.admin.status: true
+      shviatickfix.admin.reload: true
+  shviatickfix.admin.status:
+    description: Voir ce que le correctif a fait depuis le démarrage (/shviatickfix status).
+    default: op
+  shviatickfix.admin.reload:
+    description: Recharger la configuration (/shviatickfix reload).
+    default: op

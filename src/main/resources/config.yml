@@ -1,0 +1,23 @@
+# SHViaTickFix
+#
+# Depuis la 26.x, le serveur expulse un joueur dont le jeu envoie deux positions dans un même tick
+# (« Invalid move player packet received »), sans rien écrire dans la console. Les clients 1.21.2 et 1.21.3, traduits
+# par ViaBackwards, le font parfois, surtout pendant le chargement du monde à l'arrivée. ViaBackwards ajoute déjà la
+# fin de tick qui manque pour les versions plus anciennes ; ce plugin fait la même chose pour la 1.21.2 et la 1.21.3,
+# juste avant la deuxième position. Les autres versions ne passent pas par le correctif.
+#
+# Commandes :
+#   /shviatickfix status   Nombre de fins de tick ajoutées depuis le démarrage, et de connexions concernées.
+#   /shviatickfix reload   Recharge config.yml et messages.yml. Une erreur de syntaxe annule le rechargement et garde
+#                          l'ancienne configuration.
+#
+# Permissions (op par défaut) :
+#   shviatickfix.admin          Toute l'administration.
+#   shviatickfix.admin.status   /shviatickfix status.
+#   shviatickfix.admin.reload   /shviatickfix reload.
+
+# Ajoute la fin de tick qui manque. À false, les clients 1.21.2 et 1.21.3 retrouvent le comportement d'origine.
+enabled: true
+
+# Écrit une ligne dans la console la première fois qu'une fin de tick est ajoutée pour une connexion.
+log: true

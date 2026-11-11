@@ -1,0 +1,12 @@
+no-permission: "&7&l« &c&lSH &8&l» &7Tu n'as pas la &cpermission&7."
+# %subs% : les sous-commandes de /shviatickfix que l'expéditeur peut utiliser
+usage-admin: "&7&l« &e&lSH &8&l» &7Utilisation : &e/shviatickfix &7<&e%subs%&7>."
+# %state% : state-on ou state-off, %count% : fins de tick ajoutées depuis le démarrage, %connections% : connexions concernées
+status: "&7&l« &e&lSH &8&l» &7Correctif &e%state%&7 : &e%count% &7fin(s) de tick ajoutée(s) pour &e%connections% &7connexion(s) depuis le démarrage."
+state-on: "actif"
+state-off: "désactivé"
+# Affiché par status quand le correctif n'a pas pu se brancher sur ViaBackwards au démarrage
+not-installed: "&7&l« &c&lSH &8&l» &7Le correctif n'est &cpas branché &7sur ViaBackwards : voir la console du démarrage."
+reloaded: "&7&l« &a&lSH &8&l» &7Configuration de SHViaTickFix &arechargée&7."
+# %file% : fichier en erreur, %error% : première ligne de l'erreur
+reload-failed: "&7&l« &c&lSH &8&l» &7Rechargement annulé, erreur dans &c%file% &7: &c%error%&7. L'ancienne configuration reste active."
